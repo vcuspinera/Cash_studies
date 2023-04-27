@@ -60,7 +60,9 @@ knitr::include_graphics(here::here("images", "03_seguros.png"))
 ```{r echo=FALSE, encuestas, fig.align = 'center', out.width = "70%"}
 knitr::include_graphics(here::here("images", "03_encuestas.png"))
 ```
+</div>
 
+<div class="columns-2">
 ```{r echo=FALSE, finanzas, fig.align = 'center', out.width = "50%"}
 knitr::include_graphics(here::here("images", "03_finanzas.png"))
 ```
@@ -115,20 +117,19 @@ Estudios cuantitativos periódicos
 
 - 4 **trimestrales** (indicadores)  y  1 **anual** (coyuntura)
 
-- Aspectos metodológicos:
-
 <div class="columns-2">
-- Aprox. **2,100 encuestas** 
-- Localidades ≥ **50 mil habitantes**
-- Edad **18-79** años
-- Entrevista cara a cara
-- **Estratificado por región**
-- Selección aleatoria por AGEB, manzana, cuadra, vivienda, hogar y persona
-</div>
+- Aspectos metodológicos:
+   - Aprox. **2,100 encuestas** 
+   - Localidades ≥ **50 mil habitantes**
+   - Edad **18-79** años
+   - Entrevista cara a cara
+   - **Estratificado por región**
+   - Selección aleatoria por AGEB, manzana, cuadra, vivienda, hogar y persona
 
-```{r echo=FALSE, mapa_01, fig.align = 'center', out.width = "60%"}
+```{r echo=FALSE, mapa_01, fig.align = 'center', out.width = "100%"}
 knitr::include_graphics(here::here("images", "07_mapa.png"))
 ```
+</div>
 
 ## Encuestas trimestrales
 - **Temas fijos**
@@ -155,15 +156,10 @@ knitr::include_graphics(here::here("images", "09_gastos.png"))
 
 __*"En los billetes… ¿qué elementos de seguridad recuerdas?"*__
 
-<div class="columns-2">
-```{r echo=FALSE, cel_01, fig.align = 'center', out.width = "90%"}
-knitr::include_graphics(here::here("images", "10_cel.png"))
+```{r echo=FALSE, qr_01, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "10_cel_y_qr.png"))
 ```
 
-```{r echo=FALSE, qr_01, fig.align = 'center', out.width = "65%"}
-knitr::include_graphics(here::here("images", "10_qr.png"))
-```
-</div>
 
 ## Encuestas trimestrales – actividad
 
@@ -193,17 +189,12 @@ knitr::include_graphics(here::here("images", "13_calidad.png"))
 
 ## Encuestas trimestrales
 
-<div class="columns-2">
 Indicadores **publicados** en el **SIE**.<footnote>Sistema de Información Económica (SIE) del Banco de México.<br>⚠️ Nota:  Para quienes programan en ![](images/14_R.png){width=3%} se pueden conectar al SIE a través de SIE API usando el paquete `siebanxicor`.</footnote>
-```{r echo=FALSE, sie, fig.align = 'center', out.width = "15%"}
-knitr::include_graphics(here::here("images", "14_sie.png"))
-```
-</div>
 
 - **Billete**
    - <span style="background-color:yellow">Índice de percepción de la calidad del billete en circulación</span>
       - *20, 50, 100, 200, 500 y 1000 pesos, general*
-   - Porcentaje de personas que recuerdan o conocen 2 o más elementos de seguridad
+   - Porcentaje de personas que recuerdan 2 o más elementos de seguridad
    - Porcentaje de personas que revisan la autenticidad de sus billetes
 - **Cambio**
    - Porcentaje de personas que en la última compra no recibieron su cambio completo
@@ -231,15 +222,10 @@ knitr::include_graphics(here::here("images", "14_sie.png"))
 
 __*"¿Recuerdas quién es el personaje principal del nuevo billete de $100?"*__
 
-<div class="columns-2">
-```{r echo=FALSE, cel_02, fig.align = 'center', out.width = "90%"}
-knitr::include_graphics(here::here("images", "10_cel.png"))
-```
 
-```{r echo=FALSE, qr_02, fig.align = 'center', out.width = "65%"}
-knitr::include_graphics(here::here("images", "16_qr.png"))
+```{r echo=FALSE, qr_02, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "16_cel_y_qr.png"))
 ```
-</div>
 
 ## Encuesta anual – actividad
 
@@ -247,38 +233,30 @@ knitr::include_graphics(here::here("images", "16_qr.png"))
 
 ## Encuesta anual
 
-<div class="columns-2">
 Nuevo **billete** de **$100**.<footnote>Resultados de encuesta anual 2021.</footnote>
+
+<div class="columns-2">
 
 - **71 % conoce** el billete
 - Sólo el **20 %** de quienes lo conocen, **saben** que el personaje es...
-<br>
-<br>
 
-```{r echo=FALSE, plots_a, fig.align = 'center', out.width = "120%"}
-knitr::include_graphics(here::here("images", "18_plots_a.png"))
-```
+<center>![](images/18_plots_a.png){width=100%}</center>
 
-```{r echo=FALSE, billete_a, fig.align = 'center', out.width = "45%"}
-knitr::include_graphics(here::here("images", "18_billete_a.png"))
-```
+<center>![](images/18_billete_a.png){width=45%}</center>
 </div>
 
 ## Encuesta anual
 
-<div class="columns-2">
 Nuevo **billete** de **$100**.<footnote>Resultados de encuesta anual 2021.</footnote>
 
+<div class="columns-2">
+
 - **71 % conoce** el billete
-- Sólo el **20 %** de quienes lo conocen, **saben** que el personaje es **Sor Juana Inés de la Cruz**.
+- Sólo el **20 %** de quienes lo conocen, **saben** que el personaje es...
 
-```{r echo=FALSE, plots_b, fig.align = 'center', out.width = "120%"}
-knitr::include_graphics(here::here("images", "19_plots_b.png"))
-```
+<center>![](images/19_plots_b.png){width=100%}</center>
 
-```{r echo=FALSE, billete_b, fig.align = 'center', out.width = "45%"}
-knitr::include_graphics(here::here("images", "19_billete_b.png"))
-```
+<center>![](images/19_billete_b.png){width=45%}</center>
 </div>
 
 ## Encuesta anual
@@ -318,15 +296,14 @@ Estudios cualitativos periódicos
 - Aspectos metodológicos:
    - Grupos reducidos **10 participantes**
    - Alcance: CDMX y 6 ciudades grandes o medianas<footnote>Se ilustra en el mapa la distribución de la 2a ronda de grupos focales 2021.</footnote>
-   <br>
-   <br>
    - Edad **18-60 años**
    - Niveles socioeconómicos: nivel **ABC+**, **C-/D+**, **usuarios intensivos** (o personas ciegas)
-</div>
 
-```{r echo=FALSE, mapa_02, fig.align = 'center', out.width = "35%"}
+```{r echo=FALSE, mapa_02, fig.align = 'center', out.width = "100%"}
 knitr::include_graphics(here::here("images", "23_mapa.png"))
 ```
+
+</div>
 
 ## Grupos focales
 - ⭐ **<span style="color:black">Moneda de 50 centavos</span>** ⭐️
@@ -434,13 +411,15 @@ Selección de **marcas hápticas**.<footnote>Estudios realizados en 2016.</footn
 knitr::include_graphics(here::here("images", "34_marcas_int.png"))
 ```
 
-```{r echo=FALSE, diagrama, fig.align = 'center', out.width = "90%"}
+<div class="rows-2">
+```{r echo=FALSE, diagrama, fig.align = 'center', out.width = "80%"}
 knitr::include_graphics(here::here("images", "34_diagrama.png"))
 ```
 
-```{r echo=FALSE, marcas_mexico, fig.align = 'center', out.width = "50%"}
+```{r echo=FALSE, marcas_mexico, fig.align = 'center', out.width = "45%"}
 knitr::include_graphics(here::here("images", "34_marcas_mex.png"))
 ```
+</div>
 </div>
 
 ## Estudios con personas ciegas
@@ -494,15 +473,9 @@ Estudios cuantitativos periódicos
 
 ## Inspecciones a la banca<footnote>Información de acuerdo al Programa de trabajo 2021-2022 del Banco de México.</footnote>
 
-<div class="columns-2">
-```{r echo=FALSE, atm_2, fig.align = 'center', out.width = "100%"}
-knitr::include_graphics(here::here("images", "39_atm.png"))
+```{r echo=FALSE, dos_fotos, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "39_fotos.png"))
 ```
-
-```{r echo=FALSE, canje_01, fig.align = 'right', out.width = "88%"}
-knitr::include_graphics(here::here("images", "39_canje.png"))
-```
-</div>
 
 - Cumplimiento al **servicio de canje** en sucursales bancarias.
 - **Calidad de los billetes** entregados en sucursales y ATM.
@@ -523,19 +496,17 @@ knitr::include_graphics(here::here("images", "40_calidad_mal.png"))
 ```
 
 <br>
-<br>
 
 - **Canje** de billetes y monedas
-
-```{r echo=FALSE, deteriorado, fig.align = 'center', out.width = "65%"}
+```{r echo=FALSE, deteriorado, fig.align = 'center', out.width = "60%"}
 knitr::include_graphics(here::here("images", "40_deteriorado.png"))
 ```
 
-```{r echo=FALSE, desmonetizado, fig.align = 'center', out.width = "65%"}
+```{r echo=FALSE, desmonetizado, fig.align = 'center', out.width = "60%"}
 knitr::include_graphics(here::here("images", "40_desmonetizado.png"))
 ```
 
-```{r echo=FALSE, canje_02, fig.align = 'center', out.width = "65%"}
+```{r echo=FALSE, canje_02, fig.align = 'center', out.width = "60%"}
 knitr::include_graphics(here::here("images", "40_canje.png"))
 ```
 
@@ -598,25 +569,22 @@ Estudios cualitativos especiales
 - Zonas del billete que **captan la atención**.<footnote>Estudio de Neurociencias de 2014 sobre los elementos de seguridad en los billetes.
 </footnote>
 
-<div class="columns-2">
-```{r echo=FALSE, zonas_20, fig.align = 'center', out.width = "70%"}
-knitr::include_graphics(here::here("images", "48_20.png"))
+```{r echo=FALSE, zonas_billetes, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "48_billetes.png"))
 ```
 
-```{r echo=FALSE, zonas_200, fig.align = 'center', out.width = "80%"}
-knitr::include_graphics(here::here("images", "48_200.png"))
-```
-</div>
-
 <div class="columns-2">
+<br>
 <br>
 
 - Mapa visual de los **elementos más memorables** por cada billete.
 
-```{r echo=FALSE, memorables, fig.align = 'center', out.width = "60%"}
+<br>
+<br>
+
+```{r echo=FALSE, memorables, fig.align = 'center', out.width = "55%"}
 knitr::include_graphics(here::here("images", "48_memorables.png"))
 ```
-
 </div>
 
 
@@ -634,7 +602,10 @@ knitr::include_graphics(here::here("images", "48_memorables.png"))
 3. Colores que **contrasten**
 4. **Números grandes**
 
-```{r echo=FALSE, navegacion, fig.align = 'center', out.width = "80%"}
+<br>
+<br>
+
+```{r echo=FALSE, navegacion, fig.align = 'center', out.width = "70%"}
 knitr::include_graphics(here::here("images", "49_navegacion.png"))
 ```
 </div>
@@ -655,7 +626,7 @@ knitr::include_graphics(here::here("images", "50_cerebro.png"))
 **Hallazgo:**  
 No poner otro elemento en el espacio donde la gente ya ubica la leyenda *"BANCO DE MÉXICO"*.
 
-```{r echo=FALSE, marca_200, fig.align = 'center', out.width = "65%"}
+```{r echo=FALSE, marca_200, fig.align = 'center', out.width = "55%"}
 knitr::include_graphics(here::here("images", "50_200.png"))
 ```
 
@@ -664,18 +635,10 @@ knitr::include_graphics(here::here("images", "50_200.png"))
 # Comentarios finales
 
 ## Comentarios finales
-Características de un **actuario**:
 
-<div class="columns-2">
+Los **conocimientos y habilidades** de un **actuario** para analizar y resolver problemas lo hacen un profesionista muy **versátil**, que puede desarrollarse en diversas áreas de la industria, gobierno y empresas.
 
-- Versátil
-- Analítico
-- Cuantitativo
-- Innovador
-
-</div>
 <br>
-Los **conocimientos y habilidades** de un **actuario** para analizar y resolver problemas lo hacen un profesionista muy **versátil**, que puede desarrollarse en diversas áreas de la industria, gobierno y empresas:
 
 ```{r echo=FALSE, empresas, fig.align = 'center', out.width = "100%"}
 knitr::include_graphics(here::here("images", "52_empresas.png"))
@@ -700,16 +663,16 @@ Página web del ![](images/53_banxico.png){width=22%}: [www.banxico.org.mx](www.
 
 - **Ponente**: Víctor H. Cuspinera Contreras
 
-   - ![](images/54_email.png){width=4%} [vcuspinera@gmail.com](mailto:vcuspinera@gmail.com)
-   - ![](images/54_linkedin.png){width=4%} [victor-cuspinera-56185a28](https://www.linkedin.com/in/victor-cuspinera-56185a28/)
-   - ![](images/54_github.png){width=4%} [vcuspinera](https://github.com/vcuspinera)
+   - ![](images/54_email.png){width=3%} [vcuspinera@gmail.com](mailto:vcuspinera@gmail.com)
+   - ![](images/54_linkedin.png){width=3%} [victor-cuspinera-56185a28](https://www.linkedin.com/in/victor-cuspinera-56185a28/)
+   - ![](images/54_github.png){width=3%} [vcuspinera](https://github.com/vcuspinera)
 
 <br>
 
 - **Centro de contacto**: información de billetes y monedas
 
-   - ![](images/54_tel.png){width=3%} 800-BANXICO (800 226 9426)
-   - ![](images/54_email.png){width=4%} [dinero@banxico.org.mx](mailto:dinero@banxico.org.mx)
+   - ![](images/54_tel.png){width=2%} 800-BANXICO (800 226 9426)
+   - ![](images/54_email.png){width=3%} [dinero@banxico.org.mx](mailto:dinero@banxico.org.mx)
 
 
-# ¿Dudas?
+# ¿Dudas?{data-background=images/55_background.png data-background-size=cover}
