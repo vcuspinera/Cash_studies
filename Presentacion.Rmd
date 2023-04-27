@@ -191,7 +191,7 @@ Indicadores **publicados** en el **SIE**.<footnote>Sistema de Información Econ�
 
 - ⭐ **<span style="color:black">Preferencia entre el billete y la moneda de $20</span>** ⭐️
 
-- Evaluación general de los Bocentos
+- Evaluación general de los Bocetos
 
 - Familia actual de billetes
 
@@ -376,7 +376,7 @@ Estudios cualitativos especiales
 
 - ⭐ **<span style="color:black">Tablilla para denominar billetes</span>** ⭐️
 
-- Relieve en ventana transaparente de los billetes
+- Relieve en ventana transparente de los billetes
 
 - Moneda de 50 centavos
 
@@ -538,7 +538,7 @@ Estudios cualitativos especiales
 ## Neurociencia
 - Evaluar **percepción táctil y visual** sobre el efectivo.
 
-- Uso de técnicas que integran Neurociencia<footnote>Técnica científica que estudia el sistema nervioso del ser humano para trata de descifrar cómo opera el cerebro.</footnote>, Antropología, Psicología, Estadística y Tecnológia
+- Uso de técnicas que integran Neurociencia<footnote>Técnica científica que estudia el sistema nervioso del ser humano para trata de descifrar cómo opera el cerebro.</footnote>, Antropología, Psicología, Estadística y Tecnología
    - Laboratorio
    - Entrevistas
    - Encuestas en la calle
