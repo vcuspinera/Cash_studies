@@ -18,4 +18,4 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 |Víctor Hugo <br>Cuspinera Contreras | vcuspinera@gmail.com | [vcuspinera](https://github.com/vcuspinera) |
 
 ## Presentación
-⭐️ La presentación se encuentra en [este link](https://vcuspinera.github.io/Cash_studies/Presentacion.html).
+⭐️ La presentación se encuentra en [este link](https://vcuspinera.github.io/Cash_studies/Presentacion.html#1).
