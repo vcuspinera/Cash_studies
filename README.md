@@ -1,4 +1,5 @@
 # Estudios y análisis relacionados con el dinero en efectivo
+
 ⚠️ *Note: the material of this repository would be shared mainly in Spanish.*
 
 **Resumen**: Los **conocimientos y habilidades** de un **actuario** para analizar y resolver problemas lo hacen un profesionista muy **versátil**, que puede desarrollarse en diversas áreas de la industria, gobierno y empresas. En esta presentación comparto mi experiencia sobre estudios estudios cuantitativos y cualitativos realizados por el Banco de México relacionados con los billetes y monedas mexicanos. 
@@ -13,9 +14,11 @@
 MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Autor
-|Nombre |e-mail |GitHub user|
-|:----:|:----:|:-----:|
-|Víctor Hugo <br>Cuspinera Contreras | vcuspinera@gmail.com | [vcuspinera](https://github.com/vcuspinera) |
+
+|Nombre |e-mail |GitHub user|  
+|:----:|:----:|:-----:|  
+|Víctor Hugo <br>Cuspinera Contreras | vcuspinera@gmail.com | [vcuspinera](https://github.com/vcuspinera) |  
 
 ## Presentación
+
 ⭐️ La presentación se encuentra en [este link](https://vcuspinera.github.io/Cash_studies/Presentacion.html#1).
