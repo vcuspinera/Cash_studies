@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/MCD/Desarrollo/50DataScience-PrDev/
+cd ~/Documents/levic/02_Studies/2023-04_Congreso_AT_UDLAP/05_GitHub_Repo/
 git checkout main
 git branch -d gh-pages
 git push origin --delete gh-pages

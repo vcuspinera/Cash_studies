@@ -1,11 +1,21 @@
-# 50DataScience-PrDev
+# Estudios y análisis relacionados con el dinero en efectivo
+⚠️ *Note: the material of this repository would be shared mainly in Spanish.*
 
-Presentación de 50 años de la Ciencia de Datos.
+**Resumen**: Los **conocimientos y habilidades** de un **actuario** para analizar y resolver problemas lo hacen un profesionista muy **versátil**, que puede desarrollarse en diversas áreas de la industria, gobierno y empresas. En esta presentación comparto mi experiencia sobre estudios estudios cuantitativos y cualitativos realizados por el Banco de México relacionados con los billetes y monedas mexicanos. 
 
-Este trabajo es parte de la clase de Desarrollo de Proyecto II de la Maestría en Ciencia de los Datos (MCD) del Centro Universitario de Ciencias Económico-Administrativas (CUCEA), Universidad de Guadalajara (UDG).
+```diff
+⚠ El contenido de este repositorio y presentación, así como las conclusiones que
+  de ellas se derivan, son responsabilidad exclusiva del autor y no reflejan
+  necesariamente las del Banco de México.
+```
 
-Fue elaborado por:
-- Cesar Medina [CesarMedina95](https://github.com/CesarMedina95)
-- Manuel Gastelum [m5991](https://github.com/m5991) 
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-La presentación se encuentra en [este link](https://m5991.github.io/50DataScience-PrDev/Presentacion.html).
+## Autor
+|Nombre |e-mail |GitHub user|
+|:----:|:----:|:-----:|
+|Víctor Hugo <br>Cuspinera Contreras | vcuspinera@gmail.com | [vcuspinera](https://github.com/vcuspinera) |
+
+## Presentación
+⭐️ La presentación se encuentra en [este link](https://vcuspinera.github.io/Cash_studies/Presentacion.html).

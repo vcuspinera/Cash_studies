@@ -1,271 +1,715 @@
 ---
-title: "50 años de la Ciencia de los Datos"
-author: Cesar Medina, Manuel Gastelum
-date: "15 de febrero de 2023"
+title: "Estudios y análisis relacionados con el dinero en efectivo"
+author: Víctor Hugo Cuspinera Contreras
+date: "28 de abril de 2023"
 output: 
   ioslides_presentation:
     transition: slower
     widescreen: true
     css: JB_style.css
-    logo: images/logo.png
+    logo: images/01_congreso.png
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
----
+<style>
+div.footnotes {
+  position: absolute;
+  bottom: 5px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.6em;
+}
+</style>
 
-- En 1962 se publicó "The Future of Data Analysis" (FoDA).
-- Se hablaba entonces de una nueva ciencia, una cuyo tema de interés es aprender de los datos.
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('slide:not(.backdrop):not(.title-slide)').append('<div class=\"footnotes\">');
 
-```{r echo=FALSE, tukey, fig.align = 'center', out.width = "55%", fig.cap = "John Tukey, autor de FoDA y uno de los estadísticos más importantes del siglo XX"}
-knitr::include_graphics(here::here("images", "tukey.jpg"))
-```
+  $('footnote').each(function(index) {
+    var text  = $(this).html();
+    var fnNum = (index+1).toString();
+    $(this).html(fnNum.sup());
 
-# Ciencia de los Datos (CD) vs. Estadística
-
----
-
-- "Data Science Initiative" (DSI) es un movimiento de la Universidad de Michigan anunciado en 2015 con un presupuesto de 100MDD.
-- Los estadísticos se sienten excluidos del "Data Science Movement".
-- Para ellos, mucho de lo que representa CD no es nada nuevo.
-- Las definiciones tanto de DS como de la Estadística pueden ser en muchos casos intercambiables.
-
-<b>
-"Científico de datos" se refiere a un profesional que utiliza métodos científicos para liberar y crear significado a partir de datos sin procesar.
-
-"Estadística" significa la práctica o la ciencia de recopilar y analizar datos numéricos en grandes cantidades.
-</b>
-
-- Claramente hay muchas visiones de la CD y su relación con la estadística. A continuación se presentan algunos de estos temas recurrentes.
-
-## Big Data (BD)
-
-- BD no es algo exactamente nuevo. Por ejemplo: desde hace cientos de años se han ejecutado censos de población.
-- Los estadísticos siempre se han sentido cómodos con grandes conjuntos de datos como estos.
-- Dentro de la estadística se crearon herramientas para tratar con BD como lo son el "muestreo" y la "suficiencia".
-- DS = BD no obtiene nada demasiado sustancial en las áreas involucradas.
-
-```{r echo=FALSE, census, fig.align = 'center', out.width = "30%", fig.cap = "Extracto del primer censo en EEUU en 1790"}
-knitr::include_graphics(here::here("images", "census.png"))
-```
-
-## Habilidades
-
-- CD se enfoca en BD, pero esta no puede ser acomodada en recursos computacionales normales.
-- Los científicos de datos tienen las habilidades necesarias para lidiar con estos grandes conjuntos de datos.
-- Pero, ¿Son habilidades para resolver el problema real de inferencia?
-- En realidad se trata de habilidades para lidiar con artefactos como el computo distribuido a gran escala.
-
-```{r echo=FALSE, hadoop, fig.align = 'center', out.width = "40%", fig.cap = "Hadoop y otras herramientas para cluster computing"}
-knitr::include_graphics(here::here("images", "hadoop.jpg"))
-```
-
-## Empleos
-
-- Se ha creado una gran necesidad en el mercado labora por Científicos de Datos.
-- Pero, hay pocos puestos de CD reales para personas sin experiencia laboral.
-- El desarrollo de un buen científico de datos tomará dedicación y tiempo.
-- Los programas actuales de CD pueden no crear Científicos de datos preparados para todas las bases de datos, software y workflows que hay allá afuera.
-
-```{r echo=FALSE, jobs, fig.align = 'center', out.width = "35%", fig.cap = "Cantidad de posiciones CD entre 2010 y 2020"}
-knitr::include_graphics(here::here("images", "jobs.png"))
-```
-
-## ¿Qué es real?
-
-- Los medios populares se han vuelto locos acerca de la CD. 
-- Es comprensible ya que sí estamos presenciando algo nunca antes visto.
-- Lo cierto que si hay (y habrán) muchos datos allá afuera que esperan su procesamiento.
-
-```{r echo=FALSE, techmedia, fig.align = 'center', out.width = "50%", fig.cap = "Principales blogs de tecnología"}
-knitr::include_graphics(here::here("images", "techmedia.jpeg"))
-```
+    var footnote   = fnNum + '. ' + text + '<br/>';
+    var oldContent = $(this).parents('slide').children('div.footnotes').html();
+    var newContent = oldContent + footnote;
+    $(this).parents('slide').children('div.footnotes').html(newContent);
+  });
+});
+</script>
 
 
+## Antes de iniciar
 
+<font size="100">El contenido de esta presentación, así como las conclusiones que de ésta se derivan, **son responsabilidad exclusiva del autor** y no reflejan necesariamente las del Banco de México.</font>
 
-# El Alcance completo de la Ciencia de los Datos
-
----
-
-De acuerdo a Chambers el campo aspirante más amplio es Greater Data Science (GDS). Chambers y Cleveland dividen su tema ampliado en divisiones/temas/subcampos de actividad específicos.
-
-Las actividades de Greater Data Science se clasifican en 6 divisiones:
+## Introducción
+Principales **áreas de trabajo** de un actuario.
 
 <div class="columns-2">
 
-1. Data Exploration and Preparation
-2. Data Representation and Transformation
-3. Computing with Data
-4. Data Modeling
-5. Data Visualization and Presentation
-6. Science about Data Science
+```{r echo=FALSE, seguros, fig.align = 'center', out.width = "45%"}
+knitr::include_graphics(here::here("images", "03_seguros.png"))
+```
 
-``` {r echo=FALSE, Diapositiva1, fig.align = 'right', out.width = "100%"}
-knitr::include_graphics(here::here("images", "Diapositiva 1.jpg"))
+```{r echo=FALSE, encuestas, fig.align = 'center', out.width = "70%"}
+knitr::include_graphics(here::here("images", "03_encuestas.png"))
+```
+
+```{r echo=FALSE, finanzas, fig.align = 'center', out.width = "50%"}
+knitr::include_graphics(here::here("images", "03_finanzas.png"))
+```
+
+```{r echo=FALSE, academia, fig.align = 'center', out.width = "50%"}
+knitr::include_graphics(here::here("images", "03_academia.png"))
 ```
 
 </div>
 
-# Las 6 divisiones
+```{r echo=FALSE, gobierno, fig.align = 'center', out.width = "23%"}
+knitr::include_graphics(here::here("images", "03_gobierno.png"))
+```
 
-## 1. Exploración y preparación de los datos
+## Introducción
 
- - Exploración. Desde que John Tukey acuñó el término "análisis exploratorio de datos" (AED),todos estamos de acuerdo en que todos los científicos de datos dedican mucho tiempo y esfuerzo a explorar los datos para comprobar sus propiedades más básicas y sacar a la luz características inesperadas. Esta labor detectivesca aporta información crucial a todas las iniciativas basadas en datos.
+```{r echo=FALSE, banxico, fig.align = 'center', out.width = "30%"}
+knitr::include_graphics(here::here("images", "04_banxico.png"))
+```
 
-- Preparación. Muchos conjuntos de datos contienen anomalías y artefactos.
+- Banco de México ≡ **Banco Central**
+- Finalidad: **proveer** a la economía del país de **moneda nacional**.
+- En el **área de Emisión** se realizan **estudios cualitativos y cuantitativos** sobre el **dinero en efectivo**
+   - Conocer la **opinión** de las personas
+   - Actualmente estudios **publicados de 2011 a 2021**
 
-- Cualquier proyecto basado en datos requiere identificar y abordar cuidadosamente estos problemas. Las respuestas van desde el reformateo y la recodificación de los propios valores hasta preprocesamientos más ambiciosos, como la agrupación, el suavizado y el subconjunto. Hoy en día se habla a menudo de limpieza de datos.
- 
-
-## 2. Representacion y transformacion de los datos
-
-<font size="4">
-
-Los científicos de datos desarrollan habilidades en dos áreas específicas:
-
-- Bases de datos modernas. El alcance de la representación de datos actual incluye todo, desde archivos de texto caseros y hojas de cálculo hasta bases de datos SQL y noSQL, bases de datos distribuidas y flujos de datos en directo. Los científicos de datos necesitan conocer las estructuras, las transformaciones y los algoritmos implicados en el uso de todas estas representaciones diferentes.
+## Estudios
 
 <div class="columns-2">
 
-- Representaciones matemáticas. Se trata de estructuras matemáticas interesantes y útiles para representar datos de tipos especiales, como datos acústicos, de imágenes, de sensores y de redes.
+### **Cuantitativos**
 
-Por ejemplo, para obtener características con datos acústicos, a menudo se transforma al cepstrum o la transformada de Fourier; para datos de imágenes y sensores, la transformada wavelet o alguna otra transformada multi-escala (por ejemplo, pirámides en aprendizaje profundo). Los científicos de datos desarrollan instalaciones con estas herramientas y maduran su criterio a la hora de utilizarlas.
+- Encuestas
+- Mystery Shopper
+- Inspecciones a la banca
+- Vida media de los billetes
+- Métrica-D
 
-```{r echo=FALSE, "Diapositiva 3", fig.align = 'right', out.width = "100%", fig.cap = "DataBase"}
-knitr::include_graphics(here::here("images", "Diapositiva 3.jpg"))
+
+### **Cualitativos**
+
+- Grupos focales
+- Diario de Pagos
+- Estudios con personas ciegas
+- Neurociencia
+</div>
+
+# Encuestas
+Estudios cuantitativos periódicos
+
+## Encuestas
+
+- 4 **trimestrales** (indicadores)  y  1 **anual** (coyuntura)
+
+- Aspectos metodológicos:
+
+<div class="columns-2">
+- Aprox. **2,100 encuestas** 
+- Localidades ≥ **50 mil habitantes**
+- Edad **18-79** años
+- Entrevista cara a cara
+- **Estratificado por región**
+- Selección aleatoria por AGEB, manzana, cuadra, vivienda, hogar y persona
+</div>
+
+```{r echo=FALSE, mapa_01, fig.align = 'center', out.width = "60%"}
+knitr::include_graphics(here::here("images", "07_mapa.png"))
+```
+
+## Encuestas trimestrales
+- **Temas fijos**
+   - ⭐ **<span style="color:black">Usos y hábitos</span>** ⭐
+   - Cajeros, ventanillas y otros
+   - Servicio que ofrecen los bancos
+   - ⭐ **<span style="color:black">Elementos de seguridad</span>** ⭐️
+   - ⭐ **<span style="color:black">Estado físico de los billetes y monedas</span>** ⭐️
+<br>  
+- **Temas temporales**
+   - Medios de pago usados durante la pandemia
+   - Desinfección de billetes
+   - Evaluación de personajes
+   - Billete $500 G
+
+## Encuestas trimestrales
+**¿Qué formas de pago acostumbras usar para hacer tus gastos diarios?**<footnote>Porcentaje de la población. Respuesta múltiple, no suma 100%. Resultados de encuesta trimestral 2021 T4.</footnote>
+
+```{r echo=FALSE, gastos_diarios, fig.align = 'center', out.width = "75%"}
+knitr::include_graphics(here::here("images", "09_gastos.png"))
+```
+
+## Encuestas trimestrales – actividad
+
+__*"En los billetes… ¿qué elementos de seguridad recuerdas?"*__
+
+<div class="columns-2">
+```{r echo=FALSE, cel_01, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "10_cel.png"))
+```
+
+```{r echo=FALSE, qr_01, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "10_qr.png"))
+```
+</div>
+
+## Encuestas trimestrales – actividad
+
+<div style='position: relative; padding-bottom: 48%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alzhahvfrtqnns8v5gb5p44gwveshxaa/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+## Encuestas trimestrales
+
+¿Qué **elementos de seguridad** reconoces o recuerdas?<footnote>Porcentaje de la población que mencionó al menos un elemento de seguridad. Respuesta múltiple, no suma 100%. Resultados de encuesta trim. 2021 T4.</footnote>
+
+<div class="columns-2">
+```{r echo=FALSE, elementos_a, fig.align = 'center', out.width = "100%"}
+knitr::include_graphics(here::here("images", "12_elementos_a.png"))
+```
+
+```{r echo=FALSE, elementos_b, fig.align = 'center', out.width = "105%"}
+knitr::include_graphics(here::here("images", "12_elementos_b.png"))
+```
+</div>
+
+## Encuestas trimestrales
+
+Índice de **percepción de la calidad del billete** en circulación.<footnote>Escala entre 0 y 10, donde 0 significa que los billetes se perciben muy deteriorados y 10 que se perciben como nuevos. Original del programa de trabajo 2021-0222 del Banco de México.</footnote>
+
+```{r echo=FALSE, calidad, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "13_calidad.png"))
+```
+
+## Encuestas trimestrales
+
+<div class="columns-2">
+Indicadores **publicados** en el **SIE**.<footnote>Sistema de Información Económica (SIE) del Banco de México.<br>⚠️ Nota:  Para quienes programan en ![](images/14_R.png){width=3%} se pueden conectar al SIE a través de SIE API usando el paquete `siebanxicor`.</footnote>
+```{r echo=FALSE, sie, fig.align = 'center', out.width = "15%"}
+knitr::include_graphics(here::here("images", "14_sie.png"))
+```
+</div>
+
+- **Billete**
+   - <span style="background-color:yellow">Índice de percepción de la calidad del billete en circulación</span>
+      - *20, 50, 100, 200, 500 y 1000 pesos, general*
+   - Porcentaje de personas que recuerdan o conocen 2 o más elementos de seguridad
+   - Porcentaje de personas que revisan la autenticidad de sus billetes
+- **Cambio**
+   - Porcentaje de personas que en la última compra no recibieron su cambio completo
+   - Porcentaje de personas que no realizaron una compra por falta de cambio
+
+## Encuesta anual
+
+- ⭐ **<span style="color:black">Nuevo billete de $100</span>** ⭐️
+
+- Nuevos billetes de $1000
+
+- Medios de pago usados durante la pandemia
+
+- App BilletesMx
+
+- ⭐ **<span style="color:black">Preferencia entre el billete y la moneda de $20</span>** ⭐️
+
+- Evaluación general de los Bocentos
+
+- Familia actual de billetes
+
+- Preferencia en color de billetes
+
+## Encuesta anual – actividad
+
+__*"¿Recuerdas quién es el personaje principal del nuevo billete de $100?"*__
+
+<div class="columns-2">
+```{r echo=FALSE, cel_02, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "10_cel.png"))
+```
+
+```{r echo=FALSE, qr_02, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "16_qr.png"))
+```
+</div>
+
+## Encuesta anual – actividad
+
+<div style='position: relative; padding-bottom: 48%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4p81oqr4ot53xhpuhtooas1t3r9jha/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+
+## Encuesta anual
+
+<div class="columns-2">
+Nuevo **billete** de **$100**.<footnote>Resultados de encuesta anual 2021.</footnote>
+
+- **71 % conoce** el billete
+- Sólo el **20 %** de quienes lo conocen, **saben** que el personaje es...
+<br>
+<br>
+
+```{r echo=FALSE, plots_a, fig.align = 'center', out.width = "120%"}
+knitr::include_graphics(here::here("images", "18_plots_a.png"))
+```
+
+```{r echo=FALSE, billete_a, fig.align = 'center', out.width = "45%"}
+knitr::include_graphics(here::here("images", "18_billete_a.png"))
+```
+</div>
+
+## Encuesta anual
+
+<div class="columns-2">
+Nuevo **billete** de **$100**.<footnote>Resultados de encuesta anual 2021.</footnote>
+
+- **71 % conoce** el billete
+- Sólo el **20 %** de quienes lo conocen, **saben** que el personaje es **Sor Juana Inés de la Cruz**.
+
+```{r echo=FALSE, plots_b, fig.align = 'center', out.width = "120%"}
+knitr::include_graphics(here::here("images", "19_plots_b.png"))
+```
+
+```{r echo=FALSE, billete_b, fig.align = 'center', out.width = "45%"}
+knitr::include_graphics(here::here("images", "19_billete_b.png"))
+```
+</div>
+
+## Encuesta anual
+
+Preferencia entre **billete y moneda de $20**.
+
+```{r echo=FALSE, ByM_20_a, fig.align = 'left', out.width = "90%"}
+knitr::include_graphics(here::here("images", "20_ByM_20_a.png"))
+```
+
+## Encuesta anual
+
+Preferencia entre **billete y moneda de $20**.<footnote>Resultados de encuesta anual 2014.</footnote>
+
+```{r echo=FALSE, ByM_20_b, fig.align = 'left', out.width = "90%"}
+knitr::include_graphics(here::here("images", "21_ByM_20_b.png"))
+```
+
+<div class="columns-2">
+<center>
+**64 %** población prefiere usar el **billete**,
+
+**25 %** prefiere usar la **moneda**
+</center>
+</div>
+<br>
+<center>...**9 %** le es indiferente y **2 %** no contestó.</center>
+
+# Grupos focales
+Estudios cualitativos periódicos
+
+## Grupos focales
+
+- 2 rondas anuales
+
+<div class="columns-2">
+- Aspectos metodológicos:
+   - Grupos reducidos **10 participantes**
+   - Alcance: CDMX y 6 ciudades grandes o medianas<footnote>Se ilustra en el mapa la distribución de la 2a ronda de grupos focales 2021.</footnote>
+   <br>
+   <br>
+   - Edad **18-60 años**
+   - Niveles socioeconómicos: nivel **ABC+**, **C-/D+**, **usuarios intensivos** (o personas ciegas)
+</div>
+
+```{r echo=FALSE, mapa_02, fig.align = 'center', out.width = "35%"}
+knitr::include_graphics(here::here("images", "23_mapa.png"))
+```
+
+## Grupos focales
+- ⭐ **<span style="color:black">Moneda de 50 centavos</span>** ⭐️
+- Campañas de comunicación
+- ⭐ **<span style="color:black">Billete de $100</span>** ⭐️
+- Recordación de características principales de los billetes
+- Identificación de billetes falsos
+- ⭐ **<span style="color:black">Diversas propuestas para el diseño billetes</span>** ⭐️
+- ⭐ **<span style="color:black">Características para un nuevo cono</span>** ⭐️
+- Medios de pago
+
+
+## Grupos focales
+
+Participantes que utilizan las **monedas de 50¢** actual y anterior (dorada).<footnote>Resultados por ciudad de 2a ronda de grupos focales 2021.</footnote>
+
+```{r echo=FALSE, centavos_50, fig.align = 'center', out.width = "55%"}
+knitr::include_graphics(here::here("images", "25_50cent.png"))
+```
+
+## Grupos focales
+
+Elemento **más fácil de revisar** en el nuevo billete de **$100**.<footnote>Resultados por tipo de grupo de 2a ronda de grupos focales 2020. Respuesta múltiple, no suma 100%.<br>Base: 210 participantes = 70 de los niveles ABC+, 70 de los niveles C-/D+ y 70 usuarios intensivos de efectivo.</footnote>
+
+```{r echo=FALSE, elementos_seg, fig.align = 'center', out.width = "70%"}
+knitr::include_graphics(here::here("images", "26_elementos.png"))
+```
+
+## Grupos focales
+
+Opinión sobre **serpiente** en nuevos diseños de billetes.<footnote>El *word cloud* es parte de los resultados de la 2a ronda de grupos focales 2018. Porcentajes de acuerdo a la 2a ronda de grupos focales 2014.</footnote>
+
+<div class="columns-2">
+
+```{r echo=FALSE, serpiente, fig.align = 'center', out.width = "85%"}
+knitr::include_graphics(here::here("images", "27_serpiente.png"))
+```
+
+```{r echo=FALSE, wordcloud, fig.align = 'center', out.width = "85%"}
+knitr::include_graphics(here::here("images", "27_wordcloud.png"))
+```
+</div>
+<br>
+Diseño con serpiente: ☹️ del 59%  y  22% le asusta.
+
+## Grupos focales
+
+Propuestas para **diseños de monedas.**<footnote>Resultados de 1a ronda de grupos focales 2014.</footnote>
+
+```{r echo=FALSE, monedas, fig.align = 'center', out.width = "75%"}
+knitr::include_graphics(here::here("images", "28_MONEDAS.png"))
+```
+
+# Diario de pagos
+Estudios cualitativos periódicos
+
+## Diario de pagos
+
+- Se seleccionan **participantes de grupos focales**.
+
+- Apuntan durante **2 semanas**:
+   - **Artículos** comprados
+   - Lugar y monto de **transacción**
+   - **Medio** de pago
+   - **Billetes y monedas** pagadas y recibidas
+
+- No son estadísticamente representativos.
+- Identificar **tendencias o cambios** en el uso de efectivo.
+
+## Diario de pagos
+Comentarios<footnote>Comentarios de mi autoría basados en resultados de grupos focales.</footnote> de grupos focales relacionados con los diarios:
+
+- **Monedas de 10 y 20 centavos.**  
+
+   > *"Nadie las acepta y no alcanzan para nada"*
+
+- **Pagos y cambio.**  
+
+   > *"En tiendas no me aceptan billetes de 500 ni de 1000"*
+
+- **Redondeo.**  
+
+   > *"Te redondean y luego no sabes ni para quién es"*
+   
+# Estudios con personas ciegas
+Estudios cualitativos especiales
+
+## Estudios con personas ciegas
+
+- ⭐ **<span style="color:black">Selección de marcas hápticas</span>** ⭐️
+
+- ⭐ **<span style="color:black">Tablilla para denominar billetes</span>** ⭐️
+
+- Relieve en ventana transaparente de los billetes
+
+- Moneda de 50 centavos
+
+
+## Estudios con personas ciegas
+
+Selección de **marcas hápticas**.<footnote>Estudios realizados en 2016.</footnote>
+
+<div class="columns-2">
+```{r echo=FALSE, marcas_internacionales, fig.align = 'center', out.width = "82%"}
+knitr::include_graphics(here::here("images", "34_marcas_int.png"))
+```
+
+```{r echo=FALSE, diagrama, fig.align = 'center', out.width = "90%"}
+knitr::include_graphics(here::here("images", "34_diagrama.png"))
+```
+
+```{r echo=FALSE, marcas_mexico, fig.align = 'center', out.width = "50%"}
+knitr::include_graphics(here::here("images", "34_marcas_mex.png"))
+```
+</div>
+
+## Estudios con personas ciegas
+
+**Tablilla** para denominar billetes.<footnote>Estudio realizados en 2017.</footnote>
+
+<div class="columns-2">
+<div class="columns-2">
+```{r echo=FALSE, billetes_size, fig.align = 'left', out.width = "80%"}
+knitr::include_graphics(here::here("images", "35_size.png"))
+```
+
+```{r echo=FALSE, manos, fig.align = 'right', out.width = "115%"}
+knitr::include_graphics(here::here("images", "35_manos.png"))
+```
+</div>
+
+
+
+```{r echo=FALSE, plot_tablilla, fig.align = 'left', out.width = "120%"}
+knitr::include_graphics(here::here("images", "35_plot.png"))
+```
+
+
+```{r echo=FALSE, tablilla, fig.align = 'right', out.width = "80%"}
+knitr::include_graphics(here::here("images", "35_tablilla.png"))
+```
+</div>
+
+# Mystery shopper
+Estudios cuantitativos especiales
+
+## Mystery shopper<footnote>Información de acuerdo convocatoria de licitación pública nacional No.BM-SACRH-224-13-1.</footnote>
+<div class="columns-2">
+```{r echo=FALSE, atm_1, fig.align = 'center', out.width = "60%"}
+knitr::include_graphics(here::here("images", "37_atm.png"))
+```
+
+```{r echo=FALSE, mercado, fig.align = 'right', out.width = "80%"}
+knitr::include_graphics(here::here("images", "37_mercado.png"))
+```
+</div>
+<br>
+
+- **Extracción** de billetes en circulación.
+   - **Comercios – ATM – Ventanilla**
+
+
+# Inspecciones a la banca
+Estudios cuantitativos periódicos
+
+## Inspecciones a la banca<footnote>Información de acuerdo al Programa de trabajo 2021-2022 del Banco de México.</footnote>
+
+<div class="columns-2">
+```{r echo=FALSE, atm_2, fig.align = 'center', out.width = "100%"}
+knitr::include_graphics(here::here("images", "39_atm.png"))
+```
+
+```{r echo=FALSE, canje_01, fig.align = 'right', out.width = "88%"}
+knitr::include_graphics(here::here("images", "39_canje.png"))
+```
+</div>
+
+- Cumplimiento al **servicio de canje** en sucursales bancarias.
+- **Calidad de los billetes** entregados en sucursales y ATM.
+- Tratamiento de **piezas presuntamente falsas**.
+
+
+## Inspecciones a la banca
+<div class="columns-2">
+
+- **Calidad** del billete entregado
+
+```{r echo=FALSE, calidad_ok, fig.align = 'right', out.width = "84%"}
+knitr::include_graphics(here::here("images", "40_calidad_ok.png"))
+```
+
+```{r echo=FALSE, calidad_mal, fig.align = 'right', out.width = "85%"}
+knitr::include_graphics(here::here("images", "40_calidad_mal.png"))
+```
+
+<br>
+<br>
+
+- **Canje** de billetes y monedas
+
+```{r echo=FALSE, deteriorado, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "40_deteriorado.png"))
+```
+
+```{r echo=FALSE, desmonetizado, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "40_desmonetizado.png"))
+```
+
+```{r echo=FALSE, canje_02, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "40_canje.png"))
 ```
 
 </div>
 
-</font>
+# Vida media de los billetes
+Estudios cuantitativos periódicos
 
+## Vida media de los billetes
 
+- El **tiempo de vida** de un billete se mide **desde que sale a circulación hasta que es retirado** por desgaste o falla mecánica.
+- Para el cálculo de vida se utiliza una **función de supervivencia**.
 
-## 3. Computación con datos
+<center>Duración promedio del billete<footnote>Gráfica con base en información publicada en el SIE: Duración promedio del billete (CM4).</footnote></center>
 
-Todo científico de datos debe conocer y utilizar varios lenguajes para análisis y procesamiento de datos. 
-Estos pueden incluir lenguajes populares como R y Python, pero también lenguajes específicos para transformar y manipular texto, y para gestionar complejos pipelines. No es extraño participar en proyectos ambiciosos utilizando media docena de lenguajes de forma conjunta. 
-Más allá del conocimiento básico de los lenguajes, los científicos de datos necesitan estar al día de los nuevos modismos para utilizarlos de forma eficiente y deben comprender las cuestiones más profundas relacionadas con la eficiencia computacional.
-
-```{r echo=FALSE, Diapositiva4a, fig.align = 'left', out.width = "30%", fig.cap = "R"}
-knitr::include_graphics(here::here("images", "Diapositiva 4a.png"))
+```{r echo=FALSE, duracion, fig.align = 'center', out.width = "55%"}
+knitr::include_graphics(here::here("images", "42_duracion.png"))
 ```
 
-```{r echo=FALSE, Diapositiva4b, fig.align = 'right', out.width = "30%", fig.cap = "Python"}
-knitr::include_graphics(here::here("images", "Diapositiva 4b.png"))
+# Métrica-D
+Estudios cuantitativos especiales
+
+## Métrica-D
+
+Análisis de **estructura de denominaciones** de un país.<footnote>Información de documento “Consideraciones sobre las denominaciones de billetes en México”.</footnote>
+
+- **Objetivo**
+   - Optimizar producción y distribución del efectivo
+   - Eficiencia en transacciones
+   - Revisión de denominaciones
+   
+- **Métrica ‘D’**
+   - ‘D’ es el salario promedio ≈ 256 pesos.<footnote>Salario diario promedio del 1r trimestre 2020 Datos de la Encuesta Nacional de Ocupación y Empleo (ENOE).</footnote>
+   - **6** denominaciones para **moneda** y **6** para **billete**
+   
+- **México**
+   - **9** denominaciones para **moneda** y **6** para **billete**
+
+## Métrica-D
+
+**Estructura de denominaciones** en México.
+
+```{r echo=FALSE, metrica, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "45_metrica.png"))
 ```
 
+# Neurociencia
+Estudios cualitativos especiales
 
-## 4. Visualización y presentación de datos
+## Neurociencia
+- Evaluar **percepción táctil y visual** sobre el efectivo.
 
-- La visualización de datos en un extremo se traslapa con el EDA (histogramas, gráficos de dispersión, gráficos de series temporales), pero en la práctica la práctica moderna puede llegar a extremos mucho más elaborados.
+- Uso de técnicas que integran Neurociencia<footnote>Técnica científica que estudia el sistema nervioso del ser humano para trata de descifrar cómo opera el cerebro.</footnote>, Antropología, Psicología, Estadística y Tecnológia
+   - Laboratorio
+   - Entrevistas
+   - Encuestas en la calle
 
-```{r echo=FALSE, Diapositiva5, fig.align = 'left', out.width = "60%", fig.cap = "Visualization"}
-knitr::include_graphics(here::here("images", "Diapositiva 5.png"))
-```
 
-## 5. Modelación de datos
-
-- Modelización generativa: en la que se propone un modelo estocástico que podría haber generado los datos, y se derivan métodos para inferir propiedades del mecanismo generativo subyacente. A grandes rasgos, esto coincide con la estadística académica tradicional y sus derivaciones. 
+## Neurociencia
+- Zonas del billete que **captan la atención**.<footnote>Estudio de Neurociencias de 2014 sobre los elementos de seguridad en los billetes.
+</footnote>
 
 <div class="columns-2">
+```{r echo=FALSE, zonas_20, fig.align = 'center', out.width = "70%"}
+knitr::include_graphics(here::here("images", "48_20.png"))
+```
 
-- La modelización predictiva: en la que se construyen métodos que predicen bien sobre algún universo de datos dado, es decir, un conjunto de datos concreto muy específico. Esto coincide aproximadamente con el aprendizaje automático moderno y sus ramificaciones industriales.
+```{r echo=FALSE, zonas_200, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "48_200.png"))
+```
+</div>
 
-```{r echo=FALSE, Diapositiva6, fig.align = 'right', out.width = "100%", fig.cap = "Data Model"}
-knitr::include_graphics(here::here("images", "Diapositiva 6.png"))
+<div class="columns-2">
+<br>
+
+- Mapa visual de los **elementos más memorables** por cada billete.
+
+```{r echo=FALSE, memorables, fig.align = 'center', out.width = "60%"}
+knitr::include_graphics(here::here("images", "48_memorables.png"))
 ```
 
 </div>
 
-## 6. Ciencia sobre ciencia de datos
 
-Tukey propuso que existe una "ciencia del análisis de datos y debería ser reconocida como una de las más complicadas de todas las ciencias. 
+## Neurociencia
+
+**Mapas de navegación visual**.<footnote>Estudio de Neurociencias de 2015 sobre la percepción háptica y visual de los billetes.</footnote>
 
 <div class="columns-2">
+<br>
 
-Abogó por estudio de lo que los analistas de datos "en la naturaleza" están haciendo realmente, y nos recordó que la verdadera eficacia de una herramienta está relacionada con la probabilidad de despliegue multiplicada por la probabilidad de éxito, la verdadera eficacia de una herramienta está relacionada con la probabilidad de despliegue multiplicada por la probabilidad de resultados efectivos una vez desplegada.
+**Hallazgos:**
 
-```{r echo=FALSE, Diapositiva7, fig.align = 'right', out.width = "100%", fig.cap = "Data Science"}
-knitr::include_graphics(here::here("images", "Diapositiva 7.jpg"))
+1. Efecto **señalador**
+2. **Cercanía** de imágenes
+3. Colores que **contrasten**
+4. **Números grandes**
+
+```{r echo=FALSE, navegacion, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "49_navegacion.png"))
+```
+</div>
+
+## Neurociencia
+
+<div class="columns-2">
+```{r echo=FALSE, recuerda, fig.align = 'center', out.width = "85%"}
+knitr::include_graphics(here::here("images", "50_recuerda.png"))
+```
+
+El cerebro prioriza elementos ubicados en una posición ya conocida y familiar.
+
+```{r echo=FALSE, cerebro, fig.align = 'center', out.width = "18%"}
+knitr::include_graphics(here::here("images", "50_cerebro.png"))
+```
+
+**Hallazgo:**  
+No poner otro elemento en el espacio donde la gente ya ubica la leyenda *"BANCO DE MÉXICO"*.
+
+```{r echo=FALSE, marca_200, fig.align = 'center', out.width = "65%"}
+knitr::include_graphics(here::here("images", "50_200.png"))
 ```
 
 </div>
 
-## Discusión
-- Estas seis categorías de actividad, cuando se analizan en su totalidad, abarcan un campo mucho mayor de lo que enseñan o estudian actualmente los académicos.De hecho, una sola categoría - "GDS5: Data Modeling"- dominan la representación de la ciencia de datos en los departamentos académicos actuales.
+# Comentarios finales
 
-- La tensión entre el aprendizaje automático y la estadística académica se suprime en la clasificación anterior; gran parte de ella es irrelevante para lo que los científicos de datos hacen a diario. 
+## Comentarios finales
+Características de un **actuario**:
 
-- Como se menciona más arriba los científicos de datos deben usar tanto modelos generativos como predictivos.
+<div class="columns-2">
 
+- Versátil
+- Analítico
+- Cuantitativo
+- Innovador
 
+</div>
+<br>
+Los **conocimientos y habilidades** de un **actuario** para analizar y resolver problemas lo hacen un profesionista muy **versátil**, que puede desarrollarse en diversas áreas de la industria, gobierno y empresas:
 
-
-
-
-
-# Los siguientes 50 años para la Ciencia de los Datos
-
-## Ciencia abierta
-
-- El propósito de la publicación científica es permitir la reproducibilidad de los resultados de la investigación.
-- Conforme se han hecho más complejas las técnicas de análisis de datos, la distancia entre lo que los investigadores hicieron y lo que ven los lectores se hace más grande.
-- La reproductibilidad de los experimentos computacionales es tan importante para la ciencia como para la CD.
-
-```{r echo=FALSE, papers, fig.align = 'center', out.width = "50%", fig.cap = "Papers with Code"}
-knitr::include_graphics(here::here("images", "papers.png"))
+```{r echo=FALSE, empresas, fig.align = 'center', out.width = "100%"}
+knitr::include_graphics(here::here("images", "52_empresas.png"))
 ```
 
-## Ciencia como datos
-
-- Los datos provenientes de publicaciones científicas pueden ser difíciles de extraer y limpiar.
-- Los artículos que tienen Resultados Computacionales Verificables (VCR) contienen un resultado computacional y los metadatos acerca de ese resultado, pero asociado a un URL inmutable.
-- En un mundo donde todos cada publicación científica posee este estándar permitirá extraer fácilmente los P-Values, gráficos y facilitará el fact-check del estudio.
-- Lo anterior puede revolucionar los siguientes dos tipos de estudios:
-1. Estudios cruzados con control compartido. Estudios masivos donde se van añadiendo nuevos data points.
-2. Estudios cruzados comparativos. Estudios replicables y su capacidad de compararlos.
-
-## Análisis Cientifico de los Datos
-
-- Cuando todos estos datos se encuentren disponibles, se abrirá la posibilidad de revisar empíricamente y de forma universal la efectividad de los métodos.
-- Este es un cambio de juego para la metodología estadística.
-- En los siguientes 50 años, los datos de muestra estarán disponibles para medir el rendimiento de los algoritmos en un conjunto completo de situaciones.
-
-```{r echo=FALSE, masomenos, fig.align = 'center', out.width = "50%", fig.cap = "Más-o-Menos, una herramienta que análiza analisis en bioinformática"}
-knitr::include_graphics(here::here("images", "masomenos.png"))
-```
-
-## La Ciencia de los Datos en 2065
-
-- Esos enfoques mencionados anteriormente se convertirán en estándares, nuevamente debido al código y al intercambio de datos.
-- Aparecerán nuevos Frameworks para trabajar con la ciencia como un todo.
-- La investigación se moverá a un meta-nivel, donde las preguntas serán ¿Qué pasará si utilizamos este método en toda la ciencia?
-- Habrá un enfoque en las teorías que produzcan nuevas metodologías para su uso en el análisis de datos o Machine Learning.
-
-```{r echo=FALSE, ciencia, fig.align = 'center', out.width = "50%", fig.cap = "Toda la ciencia"}
-knitr::include_graphics(here::here("images", "ciencia.png"))
-```
 
 ## Referencias
+Página web del ![](images/53_banxico.png){width=22%}: [www.banxico.org.mx](www.banxico.org.mx)
 
-- [https://www.amphilsoc.org/item-detail/photograph-john-wilder-tukey](https://www.amphilsoc.org/item-detail/photograph-john-wilder-tukey)
-- [https://www.smithsonianmag.com/smart-news/first-us-census-only-asked-six-questions-180964234/](https://www.smithsonianmag.com/smart-news/first-us-census-only-asked-six-questions-180964234/)
-- [https://www.cloudsigma.com/introduction-to-hadoop/](https://www.cloudsigma.com/introduction-to-hadoop/)
-- [https://www.datasciencecentral.com/data-science-job-market-shrinking-not-so-fast/](https://www.datasciencecentral.com/data-science-job-market-shrinking-not-so-fast )
-- [https://paperswithcode.com](https://paperswithcode.com)
-- [https://academic.oup.com/bioinformatics/article/30/21/3062/2422201](https://academic.oup.com/bioinformatics/article/30/21/3062/2422201)
-- [https://xkcd.com/1838/](https://xkcd.com/1838/)
+- Sección **Billetes y monedas**
+   - [Estudios](https://www.banxico.org.mx/billetes-y-monedas/estudios-e-indicadores/estudios-indicadores.html)
+   - [Micrositio de la nueva familia de billetes (familia G)](https://www.banxico.org.mx/billetes-y-monedas/nueva-familia-billetes--famil.html)
+   - [Características de billetes y monedas para personas con discapacidad visual](https://www.banxico.org.mx/billetes-y-monedas/caracteristicas-billetes-mo.html)
 
-## ¡Gracias por su atención! {.flexbox .vcenter}
+- Sección **Estadísticas**
+   - [Sistema de Información Económica (SIE)](https://www.banxico.org.mx/SieInternet/)
 
-```{r echo=FALSE, xkcd, fig.align = 'center', out.width = "100%"}
-knitr::include_graphics(here::here("images", "xkcd.png"))
-```
+- Sección **Publicaciones y prensa**
+   - [Programa de Trabajo](https://www.banxico.org.mx/publicaciones-y-prensa/programa-de-trabajo-institucional/programa-trabajo-plan-banco-m.html)
 
-<div class="centered">
-La presentación se encuentra disponible en este [repositorio de github](https://github.com/m5991/50DataScience-PrDev/).
-</div>
+## Contacto
+
+- **Ponente**: Víctor H. Cuspinera Contreras
+
+   - ![](images/54_email.png){width=4%} [vcuspinera@gmail.com](mailto:vcuspinera@gmail.com)
+   - ![](images/54_linkedin.png){width=4%} [victor-cuspinera-56185a28](https://www.linkedin.com/in/victor-cuspinera-56185a28/)
+   - ![](images/54_github.png){width=4%} [vcuspinera](https://github.com/vcuspinera)
+
+<br>
+
+- **Centro de contacto**: información de billetes y monedas
+
+   - ![](images/54_tel.png){width=3%} 800-BANXICO (800 226 9426)
+   - ![](images/54_email.png){width=4%} [dinero@banxico.org.mx](mailto:dinero@banxico.org.mx)
+
+
+# ¿Dudas?
