@@ -51,31 +51,10 @@ $(document).ready(function() {
 ## Introducción
 Principales **áreas de trabajo** de un actuario.
 
-<div class="columns-2">
-
-```{r echo=FALSE, seguros, fig.align = 'center', out.width = "45%"}
-knitr::include_graphics(here::here("images", "03_seguros.png"))
+```{r echo=FALSE, areas, fig.align = 'center', out.width = "80%"}
+knitr::include_graphics(here::here("images", "03_areas.png"))
 ```
 
-```{r echo=FALSE, encuestas, fig.align = 'center', out.width = "70%"}
-knitr::include_graphics(here::here("images", "03_encuestas.png"))
-```
-</div>
-
-<div class="columns-2">
-```{r echo=FALSE, finanzas, fig.align = 'center', out.width = "50%"}
-knitr::include_graphics(here::here("images", "03_finanzas.png"))
-```
-
-```{r echo=FALSE, academia, fig.align = 'center', out.width = "50%"}
-knitr::include_graphics(here::here("images", "03_academia.png"))
-```
-
-</div>
-
-```{r echo=FALSE, gobierno, fig.align = 'center', out.width = "23%"}
-knitr::include_graphics(here::here("images", "03_gobierno.png"))
-```
 
 ## Introducción
 
