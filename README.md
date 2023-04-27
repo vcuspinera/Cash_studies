@@ -22,3 +22,5 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 ## Presentación
 
 ⭐️ La presentación se encuentra en [este link](https://vcuspinera.github.io/Cash_studies/Presentacion.html#1).
+
+[![](images/00_lamina01.png)](https://vcuspinera.github.io/Cash_studies/Presentacion.html#1)
