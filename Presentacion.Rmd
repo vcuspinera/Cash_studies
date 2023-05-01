@@ -1,13 +1,14 @@
 ---
 title: "Estudios y análisis relacionados con el dinero en efectivo"
-author: Víctor Hugo Cuspinera Contreras
+author: "Víctor Hugo Cuspinera Contreras"
 date: "28 de abril de 2023"
-output: 
+output:
   ioslides_presentation:
     transition: slower
-    widescreen: true
+    widescreen: yes
     css: JB_style.css
     logo: images/01_congreso.png
+  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
