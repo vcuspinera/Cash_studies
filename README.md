@@ -30,6 +30,7 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 ### Fotogafías en congreso
 
 <div class="columns-2">
+
 ![](images/00_estudios01.png){height=40%}
 
 ![](images/00_estudios02.png){height=40%}
