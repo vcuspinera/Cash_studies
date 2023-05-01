@@ -31,7 +31,7 @@ MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.or
 
 <div class="columns-2">
 
-<img src="images/00_estudios_1.png"  width="77%">
+<img src="images/00_estudios_2.png"  width="77%">
 
 <img src="images/00_estudios_3.png"  width="22%">
 
