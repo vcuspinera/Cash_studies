@@ -142,7 +142,9 @@ knitr::include_graphics(here::here("images", "10_cel_y_qr.png"))
 
 ## Encuestas trimestrales – actividad
 
-<div style='position: relative; padding-bottom: 48%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/alzhahvfrtqnns8v5gb5p44gwveshxaa/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```{r echo=FALSE, respuestas_01, fig.align = 'center', out.width = "95%"}
+knitr::include_graphics(here::here("images", "11_Respuestas_01.png"))
+```
 
 ## Encuestas trimestrales
 
@@ -208,7 +210,9 @@ knitr::include_graphics(here::here("images", "16_cel_y_qr.png"))
 
 ## Encuesta anual – actividad
 
-<div style='position: relative; padding-bottom: 48%; padding-top: 35px; height: 0; overflow: hidden;'><iframe sandbox='allow-scripts allow-same-origin allow-presentation' allowfullscreen='true' allowtransparency='true' frameborder='0' height='315' src='https://www.mentimeter.com/app/presentation/al4p81oqr4ot53xhpuhtooas1t3r9jha/embed' style='position: absolute; top: 0; left: 0; width: 100%; height: 100%;' width='420'></iframe></div>
+```{r echo=FALSE, respuestas_02, fig.align = 'center', out.width = "95%"}
+knitr::include_graphics(here::here("images", "17_Respuestas_02.png"))
+```
 
 ## Encuesta anual
 
